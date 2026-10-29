@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/copilot-settings.json",
+  "project": {
+    "name": "Automated Documentation Sync",
+    "mode": "agentic-sdlc"
+  },
+  "copilot": {
+    "instructions": ".github/copilot-instructions.md",
+    "agentsDirectory": ".github/agents",
+    "skillsDirectory": ".github/skills",
+    "hooksDirectory": ".github/hooks"
+  },
+  "qualityGates": {
+    "requireLint": true,
+    "requireTests": true,
+    "requireSecurityScan": true,
+    "requireDocumentationFrontMatter": true,
+    "requirePullRequestReview": true
+  },
+  "git": {
+    "protectedBranches": ["main", "master"],
+    "allowedBranchPrefixes": ["feat/", "fix/", "docs/", "chore/"],
+    "commitConvention": "conventional-commits",
+    "allowForcePushToProtectedBranches": false
+  }
+}
