@@ -1,11 +1,6 @@
 ---
-title: Deployment Agent Instructions
+name: Deployment Agent Instructions
 description: Rules for validating CI/CD quality gates and release readiness.
-author: Capstone Team
-date: 2026-10-15
-version: 1.0.0
-status: approved
-tags: [instructions, deployment, ci-cd, verification]
 applyTo: ".github/agents/deployment-agent.md"
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: pr-description-agent
 description: Prepare complete, evidence-based pull-request descriptions for approved automated documentation sync changes.
-model: gpt-4o
+model: GPT-5.6 Luna (copilot)
 tools: [read_file, file_search, grep_search, run_in_terminal]
 ---
 
@@ -17,4 +17,4 @@ Include these sections:
 4. Known Limitations: Not Found outcomes, deferred work, assumptions, or out-of-scope items.
 5. Reviewer Checklist: correctness, security, error handling, test coverage, clarity, duplication, dependency safety, documentation quality, and requirement traceability.
 
-Validate that commits use `type(scope): description`, new Markdown files have front matter, and no protected branch is targeted by a direct push or force push.
+Validate that commits use `type(scope): description` and front matter matches each file type: agent definitions use the full project metadata schema, skills use `name` and `description`, and other Markdown files are not required to use agent metadata. Ensure no protected branch is targeted by a direct push or force push.

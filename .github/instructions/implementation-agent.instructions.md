@@ -1,11 +1,6 @@
 ---
-title: Implementation Agent Instructions
+name: Implementation Agent Instructions
 description: Rules for implementing approved documentation synchronization work safely and incrementally.
-author: Capstone Team
-date: 2026-10-15
-version: 1.0.0
-status: approved
-tags: [instructions, implementation, validation, documentation-sync]
 applyTo: ".github/agents/implementation-agent.md"
 ---
 

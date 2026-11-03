@@ -1,7 +1,7 @@
 ---
 name: design-reviewer
 description: Review automated documentation sync architecture for risks, gaps, security, operability, and implementation readiness.
-model: gpt-4o
+model: Claude Opus 5.5 (copilot)
 tools: [read_file, file_search, grep_search, apply_patch]
 ---
 

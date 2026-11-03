@@ -20,7 +20,7 @@ Start each delivery cycle with the Jira user story and `sdlc-orchestrator`. Requ
 
 ## Engineering Standards
 
-- Use Markdown with valid YAML front matter for every documentation file.
+- Use valid YAML front matter according to each customization file's format. The full project metadata schema below applies to agent definition files in `.github/agents/`, not to every Markdown file.
 - Keep documents traceable: requirements inform architecture; architecture informs design review and implementation planning; implementation and tests provide verification evidence.
 - Prefer small, deterministic repository scripts and checks over manual, undocumented verification.
 - Treat missing source files, empty repositories, malformed front matter, unavailable APIs, and missing required fields as explicit error cases with actionable messages.
@@ -36,9 +36,9 @@ Start each delivery cycle with the Jira user story and `sdlc-orchestrator`. Requ
 - Never push directly to `main` or `master`; use a reviewed pull request.
 - Never suggest `git push --force` to `main` or `master`.
 
-## Documentation Front Matter
+## Agent Front Matter
 
-Every `.md` documentation file must begin with this schema, before its content:
+Every agent definition file in `.github/agents/` must begin with this schema, before its content:
 
 ```yaml
 ---
@@ -52,7 +52,7 @@ tags: [comma-separated tags]
 ---
 ```
 
-Populate all fields with real project values before review. Do not merge documents with placeholder metadata.
+Populate all fields with real project values before review. Do not merge agent files with placeholder metadata. Other Markdown files do not need this full schema; use only the front matter required by their format. For example, each skill's `SKILL.md` requires `name` and `description`.
 
 ## Non-Negotiable Quality Gates
 

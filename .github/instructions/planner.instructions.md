@@ -1,11 +1,6 @@
 ---
-title: Planner Instructions
+name: Planner Instructions
 description: Rules for converting Jira user stories into approved requirements, architecture, and implementation plans.
-author: Capstone Team
-date: 2026-10-15
-version: 1.0.0
-status: approved
-tags: [instructions, planning, requirements, architecture]
 applyTo: ".github/agents/planner.md"
 ---
 

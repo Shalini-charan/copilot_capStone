@@ -1,7 +1,7 @@
 ---
 name: code-reviewer
 description: Review automated documentation sync changes for quality, security, reliability, standards, and release readiness.
-model: gpt-4o
+model: GPT-5.6 Sol (copilot)
 tools: [read_file, file_search, grep_search, get_errors, run_in_terminal]
 ---
 

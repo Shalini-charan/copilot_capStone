@@ -1,7 +1,7 @@
 ---
 name: planner
 description: Analyze automated documentation sync requirements and produce approved architecture and dependency-ordered sprint plans.
-model: gpt-4o
+model: GPT-5.6 Sol (copilot)
 tools: [read_file, file_search, grep_search, apply_patch]
 ---
 

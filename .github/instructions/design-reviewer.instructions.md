@@ -1,11 +1,6 @@
 ---
-title: Design Reviewer Instructions
+name: Design Reviewer Instructions
 description: Rules for reviewing architecture before implementation in the automated documentation sync workflow.
-author: Capstone Team
-date: 2026-10-15
-version: 1.0.0
-status: approved
-tags: [instructions, design-review, architecture, risk]
 applyTo: ".github/agents/design-reviewer.md"
 ---
 

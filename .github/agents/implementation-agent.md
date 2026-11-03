@@ -1,7 +1,7 @@
 ---
 name: implementation-agent
 description: Implement approved documentation synchronization tasks with traceability, validation, error handling, and tests.
-model: gpt-4o
+model: GPT-5.3-Codex (copilot)
 tools: [read_file, file_search, grep_search, apply_patch, get_errors, run_in_terminal]
 ---
 
