@@ -1,11 +1,6 @@
 ---
-title: Test Generator Instructions
+name: Test Generator Instructions
 description: Rules for generating and validating tests for documentation synchronization behavior.
-author: Capstone Team
-date: 2026-10-15
-version: 1.0.0
-status: approved
-tags: [instructions, testing, validation, documentation-sync]
 applyTo: ".github/agents/test-generator.md"
 ---
 

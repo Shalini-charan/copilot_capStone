@@ -1,7 +1,7 @@
 ---
 name: test-generator
 description: Generate unit and integration tests for documentation synchronization validation and error handling.
-model: gpt-4o
+model: Gemini 4 Argon (copilot)
 tools: [read_file, file_search, grep_search, apply_patch, run_in_terminal]
 ---
 

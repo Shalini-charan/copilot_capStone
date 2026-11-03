@@ -1,12 +1,7 @@
 ---
-title: SDLC Orchestrator Instructions
+name: SDLC Orchestrator Instructions
 description: Rules for coordinating a Jira-backed automated documentation sync delivery lifecycle.
-author: Capstone Team
-date: 2026-10-15
-version: 1.0.0
-status: approved
-tags: [instructions, orchestrator, jira, sdlc]
-applyTo: ".github/agents/sdlc-orchestrator.md"
+applyTo: ".github/agents/sdlc-orchestrator.agent.md"
 ---
 
 # SDLC Orchestrator Instructions

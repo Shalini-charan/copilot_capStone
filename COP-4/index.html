@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101827">
+    <title>Sign in</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        --ink: #172033;
+        --muted: #647087;
+        --line: #dce3ee;
+        --accent: #4559e8;
+        --danger: #b42338;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 32px 18px;
+        color: var(--ink);
+        background:
+          radial-gradient(ellipse at 16% 12%, rgb(100 130 255 / 22%), transparent 36%),
+          radial-gradient(ellipse at 88% 90%, rgb(53 195 181 / 16%), transparent 34%),
+          #101827;
+      }
+
+      .login-card {
+        width: min(100%, 440px);
+        padding: clamp(28px, 7vw, 44px);
+        border: 1px solid rgb(255 255 255 / 70%);
+        border-radius: 24px;
+        background: rgb(255 255 255 / 97%);
+        box-shadow: 0 28px 80px rgb(0 0 0 / 28%);
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 46px;
+        height: 46px;
+        place-items: center;
+        margin-bottom: 28px;
+        border-radius: 15px;
+        color: #fff;
+        background: linear-gradient(145deg, #6678ff, #4051dc);
+        box-shadow: 0 8px 18px rgb(69 89 232 / 25%);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.75rem, 6vw, 2rem);
+        letter-spacing: -0.045em;
+        line-height: 1.15;
+      }
+
+      .intro {
+        margin: 10px 0 30px;
+        color: var(--muted);
+        font-size: 0.96rem;
+        line-height: 1.55;
+      }
+
+      .field { margin-top: 20px; }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.88rem;
+        font-weight: 650;
+      }
+
+      input {
+        width: 100%;
+        min-height: 52px;
+        padding: 0 15px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        outline: none;
+        color: var(--ink);
+        background: #fff;
+        font: inherit;
+        transition: border-color 140ms ease, box-shadow 140ms ease;
+      }
+
+      input::placeholder { color: var(--muted); }
+
+      input:hover { border-color: #b7c1d2; }
+
+      input:focus-visible {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 4px rgb(69 89 232 / 13%);
+      }
+
+      input[aria-invalid="true"] { border-color: var(--danger); }
+
+      .field-error {
+        margin: 7px 0 0;
+        color: var(--danger);
+        font-size: 0.83rem;
+        line-height: 1.4;
+      }
+
+      .field-error[hidden], [hidden] { display: none; }
+
+      button {
+        width: 100%;
+        min-height: 52px;
+        margin-top: 26px;
+        border: 0;
+        border-radius: 12px;
+        color: #fff;
+        background: linear-gradient(110deg, #4a5ce8, #394bd1);
+        box-shadow: 0 8px 18px rgb(69 89 232 / 20%);
+        cursor: pointer;
+        font: inherit;
+        font-weight: 700;
+        transition: transform 140ms ease, box-shadow 140ms ease;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 11px 22px rgb(69 89 232 / 26%);
+      }
+
+      button:focus-visible {
+        outline: 3px solid #2638cc;
+        outline-offset: 3px;
+      }
+
+      button:active { transform: translateY(0); }
+
+      .form-feedback {
+        margin: 18px 0 0;
+        padding: 12px 14px;
+        border: 1px solid #f1c1c8;
+        border-radius: 12px;
+        color: #8f1d31;
+        background: #fff5f6;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .privacy-note {
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: 0.78rem;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="login-card">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+          <path d="M7 10V7a5 5 0 0 1 10 0v3m-11 0h12a2 2 0 0 1 2 2v8H4v-8a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M12 14v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+      </div>
+
+      <h1>Welcome back</h1>
+      <p class="intro">Enter your details below to continue.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="username">Username</label>
+          <input
+            id="username"
+            type="text"
+            autocomplete="username"
+            autocapitalize="none"
+            spellcheck="false"
+            placeholder="Enter your username"
+            aria-describedby="usernameError"
+          >
+          <p class="field-error" id="usernameError" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            autocomplete="current-password"
+            placeholder="Enter your password"
+            aria-describedby="passwordError"
+          >
+          <p class="field-error" id="passwordError" hidden></p>
+        </div>
+
+        <button type="submit">Sign in</button>
+        <p class="form-feedback" id="formFeedback" role="status" aria-live="polite" hidden></p>
+      </form>
+
+      <p class="privacy-note">This demo does not authenticate or store your credentials.</p>
+    </main>
+
+    <script>
+      (() => {
+        const form = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const usernameError = document.getElementById('usernameError');
+        const passwordError = document.getElementById('passwordError');
+        const formFeedback = document.getElementById('formFeedback');
+
+        function setFieldError(input, errorElement, message) {
+          input.setAttribute('aria-invalid', String(Boolean(message)));
+          errorElement.textContent = message;
+          errorElement.hidden = !message;
+        }
+
+        function clearFieldErrors() {
+          setFieldError(usernameInput, usernameError, '');
+          setFieldError(passwordInput, passwordError, '');
+        }
+
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          formFeedback.hidden = true;
+          formFeedback.textContent = '';
+
+          const usernameIsEmpty = usernameInput.value.trim().length === 0;
+          const passwordIsEmpty = passwordInput.value.length === 0;
+
+          setFieldError(usernameInput, usernameError, usernameIsEmpty ? 'Enter your username.' : '');
+          setFieldError(passwordInput, passwordError, passwordIsEmpty ? 'Enter your password.' : '');
+
+          if (usernameIsEmpty || passwordIsEmpty) {
+            (usernameIsEmpty ? usernameInput : passwordInput).focus();
+            return;
+          }
+
+          formFeedback.textContent = 'Sign-in is unavailable. Your credentials were not sent or saved.';
+          formFeedback.hidden = false;
+          passwordInput.value = '';
+          passwordInput.focus();
+        });
+
+        usernameInput.addEventListener('input', () => {
+          if (usernameInput.value.trim().length > 0) {
+            setFieldError(usernameInput, usernameError, '');
+          }
+        });
+
+        passwordInput.addEventListener('input', () => {
+          if (passwordInput.value.length > 0) {
+            setFieldError(passwordInput, passwordError, '');
+          }
+        });
+
+        form.addEventListener('input', () => {
+          if (!formFeedback.hidden) {
+            formFeedback.hidden = true;
+            formFeedback.textContent = '';
+          }
+        });
+
+        clearFieldErrors();
+      })();
+    </script>
+  </body>
+</html>

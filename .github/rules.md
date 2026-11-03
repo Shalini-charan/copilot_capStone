@@ -14,7 +14,7 @@ tags: [rules, pull-request, definition-of-done, sdlc]
 
 - Use an approved branch prefix and Conventional Commit messages.
 - Link each change to an approved requirement or planned task.
-- Include valid front matter on all new or modified documentation files.
+- Use front matter appropriate to each file type. Agent definitions in `.github/agents/` require the full project metadata schema; skill `SKILL.md` files require only `name` and `description`. Do not impose the agent schema on other Markdown files.
 - Run linting, security checks, unit tests, integration tests, and documentation-content checks appropriate to the change.
 - Include test evidence and known limitations in the PR description.
 - Obtain peer review approval before merge; address review findings with follow-up commits.

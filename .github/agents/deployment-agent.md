@@ -1,7 +1,7 @@
 ---
 name: deployment-agent
 description: Validate CI/CD quality gates and deployment readiness for the automated documentation sync workflow.
-model: gpt-4o
+model: GPT-5.6 Terra (copilot)
 tools: [read_file, file_search, grep_search, run_in_terminal]
 ---
 

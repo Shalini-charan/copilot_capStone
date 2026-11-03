@@ -1,8 +1,14 @@
 ---
 name: sdlc-orchestrator
+title: SDLC Orchestrator
 description: Orchestrate the Jira user story through approved requirements, architecture, design review, planning, implementation, verification, review, and pull-request preparation.
-model: gpt-4o
-tools: [read_file, file_search, grep_search, apply_patch, run_in_terminal]
+author: Capstone Team
+date: 2026-11-02
+version: 1.0.0
+status: draft
+tags: [sdlc, orchestrator, jira]
+tools: [vscode, execute, read, agent, edit, search, web, 'atlassian/*', browser, todo]
+agents: ['planner', 'design-reviewer', 'implementation-agent', 'test-generator', 'code-reviewer', 'pr-description-agent']
 ---
 
 # SDLC Orchestrator

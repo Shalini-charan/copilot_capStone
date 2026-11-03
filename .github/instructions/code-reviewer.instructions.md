@@ -1,11 +1,6 @@
 ---
-title: Code Reviewer Instructions
+name: Code Reviewer Instructions
 description: Rules for reviewing documentation sync implementation quality, security, and release readiness.
-author: Capstone Team
-date: 2026-10-15
-version: 1.0.0
-status: approved
-tags: [instructions, code-review, security, quality]
 applyTo: ".github/agents/code-reviewer.md"
 ---
 

@@ -16,7 +16,7 @@ This workspace demonstrates an agentic SDLC pipeline driven by GitHub Copilot Ag
 
 1. Open this folder in VS Code with GitHub Copilot enabled.
 2. Use a branch named `feat/`, `fix/`, `docs/`, or `chore/` followed by a concise description.
-3. Begin with requirements discovery, then maintain `requirements.md`, `architecture.md`, `design-review.md`, and `impl-plan.md` as the pipeline progresses.
+3. Begin with requirements discovery, then maintain the delivery artifacts in an issue-specific folder such as `COP-2/requirements.md`, `COP-2/architecture.md`, `COP-2/design-review.md`, and `COP-2/impl-plan.md`.
 4. Run the applicable lint and test commands before proposing a Conventional Commit such as `docs(requirements): capture approved documentation sync requirements`.
 
 ## Agent Usage
@@ -34,7 +34,7 @@ Use the agents in `.github/agents/` for the matching phase:
 - `deployment-agent` validates CI/CD checks and produces deployment readiness evidence.
 - `pr-description-agent` creates the evidence-based PR description and reviewer checklist after verification and review.
 
-Every agent in `.github/agents/` has exactly one same-named instruction in `.github/instructions/` and exactly one same-named skill in `.github/skills/`. The hooks in `.github/hooks/` are mandatory guardrails; they never authorize bypassing tests, security scans, linting, review, or protected-branch controls.
+Every agent in `.github/agents/` has a matching instruction in `.github/instructions/` and a corresponding project skill under `.github/skills/<skill-name>/SKILL.md`. Each skill uses the standard `SKILL.md` filename and has a lowercase, hyphenated skill directory (for example, `.github/skills/code-review/` and `.github/skills/planner/`). The hooks in `.github/hooks/` are mandatory guardrails; they never authorize bypassing tests, security scans, linting, review, or protected-branch controls.
 
 ## Slash Commands
 
@@ -51,4 +51,4 @@ Open `sdlc-workflow.html` in a browser for a visual map of the orchestrator work
 
 ## Required Deliverables
 
-The SDLC flow produces `requirements.md`, `architecture.md`, `design-review.md`, `impl-plan.md`, tests and verification evidence, and a pull-request description containing Summary, Changes Made, Test Evidence, Known Limitations, and Reviewer Checklist.
+The SDLC flow produces issue-scoped artifacts such as `COP-2/requirements.md`, `COP-2/architecture.md`, `COP-2/design-review.md`, `COP-2/impl-plan.md`, tests and verification evidence, and a pull-request description containing Summary, Changes Made, Test Evidence, Known Limitations, and Reviewer Checklist.
